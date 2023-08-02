@@ -1,6 +1,6 @@
 export const sample_foods: any[]=[
     {
-        id: '1',
+        
         name: 'Pizza Pepperoni',
         cookTime: '20-30',
         price: 100,
@@ -11,7 +11,7 @@ export const sample_foods: any[]=[
         tags: ['FastFood', 'Pizza', 'Lunch'],
       },
       {
-        id: '2',
+        
         name: 'Meatball',
         price: 130,
         cookTime: '35-45',
@@ -22,7 +22,7 @@ export const sample_foods: any[]=[
         tags: ['SlowFood', 'Lunch'],
       },
       {
-        id: '3',
+        
         name: 'Hamburger',
         price: 90,
         cookTime: '10-15',
@@ -33,7 +33,7 @@ export const sample_foods: any[]=[
         tags: ['FastFood', 'Hamburger'],
       },
       {
-        id: '4',
+        
         name: 'Fried Potatoes',
         price: 40,
         cookTime: '15-20',
@@ -44,7 +44,7 @@ export const sample_foods: any[]=[
         tags: ['FastFood', 'Fry'],
       },
       {
-        id: '5',
+        
         name: 'Chicken Soup',
         price: 30,
         cookTime: '40-50',
@@ -55,7 +55,7 @@ export const sample_foods: any[]=[
         tags: ['SlowFood', 'Soup'],
       },
       {
-        id: '6',
+        
         name: 'Vegetables Pizza',
         price: 80,
         cookTime: '40-50',
