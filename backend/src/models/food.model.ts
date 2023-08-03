@@ -11,6 +11,7 @@ export interface Food{
     origins: string[];
     cookTime:string;
 }
+
 export const FoodSchema = new Schema<Food>(
     {
         name: {type: String, required:true},
