@@ -48,7 +48,7 @@ router.post('/register', asyncHandler(
     const encryptedPassword = await bcrypt.hash(password, 10);
 
     const newUser:User = {
-      id:'',
+      
       name,
       email: email.toLowerCase(),
       password: encryptedPassword,
@@ -69,7 +69,7 @@ router.post('/register', asyncHandler(
     });
   
     return {
-      id: user.id,
+      
       email: user.email,
       name: user.name,
       address: user.address,
