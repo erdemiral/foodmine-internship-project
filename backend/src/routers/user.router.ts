@@ -23,9 +23,9 @@ router.get("/seed", asyncHandler(
 router.post("/login", asyncHandler(
   async (req, res) => {
     const {email, password} = req.body;
-    const user = await UserModel.findOne({email});
+    const user = await UserModel.findOne({email , password});
       
-     if(user && (await bcrypt.compare(password,user.password))) {
+     if(user) {
       res.send(generateTokenReponse(user));
      }
      else{
@@ -48,7 +48,7 @@ router.post('/register', asyncHandler(
     const encryptedPassword = await bcrypt.hash(password, 10);
 
     const newUser:User = {
-      
+      id:'',
       name,
       email: email.toLowerCase(),
       password: encryptedPassword,
@@ -63,13 +63,13 @@ router.post('/register', asyncHandler(
 
   const generateTokenReponse = (user : User) => {
     const token = jwt.sign({
-       id:user.id ,email:user.email, isAdmin: user.isAdmin
+      id: user.id, email:user.email, isAdmin: user.isAdmin
     },process.env.JWT_SECRET!,{
       expiresIn:"30d"
     });
   
     return {
-      id:user.id,
+      id: user.id,
       email: user.email,
       name: user.name,
       address: user.address,
